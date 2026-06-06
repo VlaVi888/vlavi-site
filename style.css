@@ -389,12 +389,19 @@ footer {
 
 /* Адаптивність (Мобільні пристрої) */
 @media (max-width: 768px) {
+    header {
+        position: relative; /* Відкріплюємо шапку, щоб вона не перекривала контент */
+        padding: 20px 0;
+    }
     .header-container {
         flex-direction: column;
         gap: 15px;
     }
     .nav-links {
         margin-bottom: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
     .hero-content h1 {
         font-size: 32px;
@@ -406,85 +413,9 @@ footer {
         margin-right: 0;
         display: block;
         width: 100%;
+        margin-bottom: 15px;
     }
     section {
         padding: 50px 0;
     }
-}
-/* --- СТИЛІ ДЛЯ ПЕРЕДПРОДАЖНОЇ ПІДГОТОВКИ --- */
-.presale-section {
-    background-color: #121212;
-    border-top: 1px solid #1a1a1a;
-    border-bottom: 1px solid #1a1a1a;
-}
-
-.presale-content {
-    background-color: #1a1a1a;
-    padding: 40px;
-    border-radius: 8px;
-    border: 1px solid #2a2a2a;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.presale-intro {
-    font-size: 16px;
-    color: #cccccc;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.presale-list {
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-.presale-list li {
-    margin-bottom: 15px;
-    font-size: 15px;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-}
-
-.presale-list i {
-    color: #ffb703;
-    font-size: 18px;
-    margin-right: 15px;
-}
-
-.presale-result {
-    background-color: rgba(255, 183, 3, 0.1);
-    padding: 20px;
-    border-left: 4px solid #ffb703;
-    border-radius: 0 4px 4px 0;
-    color: #ffffff;
-    font-size: 15px;
-}
-
-.presale-result strong {
-    color: #ffb703;
-}
-
-/* --- СТИЛІ ДЛЯ ЧЕКБОКСА --- */
-.checkbox-group {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 25px;
-}
-
-.checkbox-group input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    margin-top: 3px;
-    cursor: pointer;
-    accent-color: #ffb703;
-}
-
-.checkbox-group label {
-    font-size: 13px;
-    color: #aaaaaa;
-    cursor: pointer;
-    line-height: 1.4;
 }
